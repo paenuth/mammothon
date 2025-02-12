@@ -1,0 +1,27 @@
+/* Navbar styling */
+.navbar {
+  padding: 1rem;
+  background: #1a1a1a;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nvarbar a:hover {
+  color: #00ff88;
+}
+
+/*Mobile warning */
+@media (max-width: 768px) {
+  .desktop-warning {
+    display: block;
+    background: red;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+}
