@@ -3,6 +3,8 @@
     margin: 0 auto;
     padding: 80px;
     color: #333;
+    animation: fadeIn 1s forwards; /* Fade-in effect with 1s duration */
+    opacity: 0; /* Start as invisible */
   }
 
   .title {
@@ -31,3 +33,12 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+  /* Define fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
