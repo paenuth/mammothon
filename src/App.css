@@ -1,27 +1,64 @@
-/* Navbar styling */
 .navbar {
-  padding: 1rem;
-  background: #1a1a1a;
   display: flex;
-  gap: 2rem;
+  justify-content: center; /* Center the buttons */
+  align-items: center;
+  gap: 65px; /* Keep the same spacing between buttons */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  background: linear-gradient(to bottom, #1a1a1a, #1f1f1f); /* Dark gradient */
+  backdrop-filter: blur(8px); /* Smooth blur effect */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Navbar links */
 .navbar a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0px 0px; /* More padding for clickability */
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
-.nvarbar a:hover {
-  color: #00ff88;
+/* Floating hover effect */
+.navbar a:hover {
+  color: #ffcf4a;
+  transform: translateY(-3px); /* Slightly less float for subtlety */
 }
 
-/*Mobile warning */
+/* Underline effect */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffcf4a;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mobile warning */
 @media (max-width: 768px) {
   .desktop-warning {
-    display: block;
-    background: red;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+      display: block;
+      background: red;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
   }
 }
